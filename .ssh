@@ -1,0 +1,14 @@
+total 187
+drwxr-xr-x 1 AMJAD 197121      0 mai   15 15:34 ./
+drwxr-xr-x 1 AMJAD 197121      0 mai   15 15:22 ../
+drwxr-xr-x 1 AMJAD 197121      0 mai   15 15:20 .git/
+-rw-r--r-- 1 AMJAD 197121     66 avr.   5 02:36 .gitattributes
+-rw-r--r-- 1 AMJAD 197121      0 mai   15 15:34 .ssh
+drwxr-xr-x 1 AMJAD 197121      0 avr.  25 04:20 .vscode/
+drwxr-xr-x 1 AMJAD 197121      0 mai   14 17:48 convert/
+-rw-r--r-- 1 AMJAD 197121 139264 mai   14 17:24 db.sqlite3
+-rwxr-xr-x 1 AMJAD 197121    692 avr.   7 20:07 manage.py*
+drwxr-xr-x 1 AMJAD 197121      0 mai   15 15:00 media/
+drwxr-xr-x 1 AMJAD 197121      0 mai   10 19:02 projectConvert/
+-rw-r--r-- 1 AMJAD 197121     16 avr.  12 15:10 README.md
+-rw-r--r-- 1 AMJAD 197121   3106 mai   15 15:16 requirments.txt
