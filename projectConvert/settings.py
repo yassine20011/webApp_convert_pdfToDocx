@@ -25,7 +25,7 @@ SECRET_KEY = '@wo$r)7w!=u0_uc2o$t8-!k(nsj1n4r*-7ym6qfp!7b+c&ijdm'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['yassine2001.pythonanywhere.com']
+ALLOWED_HOSTS = ['3.140.91.45', 'www.freeconvert.tk', 'freeconvert.tk']
 
 
 # Application definition
@@ -121,8 +121,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/static/'
-STATIC_ROOT = '/home/Yassine2001/Project1/static/'
+STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR,'static/')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/home/Yassine2001/Project1/media/'
+MEDIA_URL = '/dev/sda1/media/'
