@@ -16,7 +16,7 @@ def main(request):
     if request.method == 'POST':
         uploaded_file = request.FILES['POST-file']
         file_system = FileSystemStorage()
-        media = r"/home/Yassine2001/Project1/media/"
+        media = r"/home/ubuntu/yassine/media"
         name = file_system.save(uploaded_file.name,  uploaded_file)
         file_converter = media + name
         pdf_file = file_converter
