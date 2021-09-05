@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.core.files.storage import FileSystemStorage
 from pdf2docx import parse
 
@@ -8,8 +8,6 @@ def base(request):
 
 def media(request):
     return render(request, 'index.html')
-
-
 
 def main(request):
     context = {}
@@ -22,4 +20,5 @@ def main(request):
         pdf_file = file_converter
         parse(pdf_file, start=0, end=None)
         context['file_name'] = "/media/" + name.rsplit('.', 1)[0] + ".docx"
+        return redirect(context['file_name'])
     return render(request, 'index.html', context)
