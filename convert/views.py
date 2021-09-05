@@ -21,5 +21,5 @@ def main(request):
         file_converter = media + name
         pdf_file = file_converter
         parse(pdf_file, start=0, end=None)
-        context['file_name'] = "/media/" + name.rsplit('.', 1)[0] + ".docx"
+        context['file_name'] = media + name.rsplit('.', 1)[0] + ".docx"
     return render(request, 'index.html', context)
