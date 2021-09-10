@@ -11,7 +11,7 @@ class StaticViewsSitemap(sitemaps.Sitemap):
 
     def items(self):
         return [
-            'convert:home',
+            'home',
             ]
 
     def location(self, items):
