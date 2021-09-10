@@ -17,7 +17,7 @@ urlpatterns = [
     path('base/', views.base, name='base'),
     path('home/', views.main, name='home'),
     path('media/',views.media, name='media'),
-    path('sitexml.xml', sitemap, {'sitemaps': sitemaps},
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps},
      name='django.contrib.sitemaps.views.sitemap')
 ]
 
