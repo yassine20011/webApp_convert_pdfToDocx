@@ -9,7 +9,7 @@ from . import views
 from django.contrib.sitemaps.views import sitemap
 from convert.sitemaps import StaticViewsSitemap
 
-app_name = "main"
+app_name = "convert"
 
 sitemaps = {'sitemap': StaticViewsSitemap}
 
