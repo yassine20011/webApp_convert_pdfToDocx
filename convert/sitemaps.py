@@ -7,7 +7,7 @@ class StaticViewsSitemap(sitemaps.Sitemap):
 
     property = 0.5 
     changefreg = "daily"
-    protocol = ['https', 'http']
+    protocol = 'https'
 
     def items(self):
         return [
