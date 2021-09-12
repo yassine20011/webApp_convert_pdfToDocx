@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sitemaps',
+    'maintenancemode',
     'convert',
 ]
 
@@ -50,7 +51,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware', 
+    'maintenancemode.middleware.MaintenanceModeMiddleware',
 ]
+
+MAINTENANCE_MODE = True
 
 ROOT_URLCONF = 'projectConvert.urls'
 
@@ -125,5 +130,5 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR,'static/')
 
-MEDIA_ROOT = os.path.join(BASE_DIR,'/home/ubuntu/yassine/media')
+MEDIA_ROOT = os.path.join(BASE_DIR,'MEDIA')
 MEDIA_URL = '/media/'
