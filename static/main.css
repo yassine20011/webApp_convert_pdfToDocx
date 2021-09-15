@@ -1,6 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,900&display=swap');
 
+input[type="file"]
+{
+  position: absolute;
+  top: -9999px;
+  left:-9999px;
+}
+
+label{
+  position: relative;
+  top: 50px;
+  left: auto;
+  right: auto;
+  bottom: unset;
+  background: rgb(57, 138, 215);
+  color: white;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  border-radius: 30px;
+  padding: 0 25px;
+  cursor: pointer;
+  transition: all ease-out 200ms;
+}
+
+label:not(.chosen):hover
+{
+    background: rgb(25, 157, 244);
+    box-shadow: 0 0 10px 0 rgb(25, 157, 244);
+}
+
+label i
+{
+  margin-right: 8px;
+}
+label.chosen {
+  background: #5cb85c;
+}
 
 span{
     color: white;
@@ -56,17 +93,47 @@ p{
 
 .container-file{
     background:#fff;
-    border: 1px solid #000; 
+    border: 1px solid rgb(0, 0, 0); 
     border-radius: 2px;
     position: relative;
-    width: none;
-    max-width: none;
-    min-width: none;
     top: 100px;
     overflow: hidden;
     align-items: center;
-    height: 300px;
+    height: 350px;
     width: 80%;
+}
+
+
+.convert-button
+{   
+  position: relative;
+  align-items: center;
+  overflow: hidden;
+  bottom: 0px;
+  height: 60px;
+  border-radius: 30px;
+  padding: 0 25px;
+  
+}
+
+.edit1
+{
+    background-color:white;
+    border: 1px solid rgb(25, 157, 244);
+    color: white;
+    color: rgb(25, 157, 244);
+    height: 45px;
+    width: 150px;
+    border-radius: 30px;
+    transition: all ease-out 200ms;
+    text-align: center;
+    font-size: 18px;
+}
+
+.edit1:not(.chosen):hover
+{   color: white;
+    background: rgb(25, 157, 244);
+    box-shadow: 10px  rgb(19, 113, 175);
 }
 
 .form-control{
@@ -131,8 +198,6 @@ p{
     align-items: center;
     height: 500px;
 }
-
-
 
 .rightside{
     position: relative;
