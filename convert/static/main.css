@@ -1,6 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,900&display=swap');
 
+input[type="file"]
+{
+  position: absolute;
+  top: -9999px;
+  left:-9999px;
+}
+
+label:not(.chosen):hover
+{
+    background: rgb(25, 157, 244);
+    box-shadow: 0 0 10px 0 rgb(25, 157, 244);
+}
+
+label i
+{
+  margin-right: 8px;
+}
+label.chosen {
+  background: #5cb85c;
+}
 
 span{
     color: white;
@@ -53,37 +73,30 @@ p{
     margin:20px 5px;
 }
 
-.submit{
-    width: 25%;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 16px;
-    color: white;
-    text-align: center;
-    padding: 12px 0;
-    border: 1px solid rgb(255, 255, 255);
-    border-radius: 5px;
-    position:relative;
-    left: 0px;
-    top: 75px;
-    margin: 0 50px;
-    max-width: 25%;
-    min-width: 15%;
-    width: 80px;
-}
 
 .container-file{
     background:#fff;
-    border: 1px solid #000; 
+    border: 1px solid rgb(0, 0, 0); 
     border-radius: 2px;
     position: relative;
-    width: none;
-    max-width: none;
-    min-width: none;
     top: 100px;
     overflow: hidden;
     align-items: center;
-    height: 300px;
+    height: 350px;
     width: 80%;
+}
+
+
+.convert-button
+{   
+  position: relative;
+  align-items: center;
+  overflow: hidden;
+  bottom: 0px;
+  height: 60px;
+  border-radius: 30px;
+  padding: 0 25px;
+  
 }
 
 .form-control{

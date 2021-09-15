@@ -55,7 +55,7 @@ MIDDLEWARE = [
     'maintenancemode.middleware.MaintenanceModeMiddleware',
 ]
 
-MAINTENANCE_MODE = True
+MAINTENANCE_MODE = False
 
 ROOT_URLCONF = 'projectConvert.urls'
 
@@ -127,8 +127,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR,'static/')
+STATIC_URL = '/static/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR,'MEDIA')
 MEDIA_URL = '/media/'
+
+if DEBUG:
+
+  STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+else:
+
+  STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
