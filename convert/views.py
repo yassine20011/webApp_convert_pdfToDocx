@@ -1,24 +1,23 @@
-from django.shortcuts import redirect, render
-from django.core.files.storage import FileSystemStorage
+from django.http import HttpResponse 
+from django.shortcuts import render, redirect 
+from .forms import *
 from pdf2docx import parse
-
-# Create your views here.
-def base(request):
-    return render(request, 'base.html')
-
-def media(request):
-    return render(request, 'index.html')
-
 def main(request):
-    context = {}
-    if request.method == 'POST':
-        uploaded_file = request.FILES['POST-file']
-        file_system = FileSystemStorage()
-        media = r"MEDIA"
-        name = file_system.save(uploaded_file.name,  uploaded_file)
-        file_converter = media + name
-        pdf_file = file_converter
-        parse(pdf_file, start=0, end=None)
-        context['file_name'] = "/media/" + name.rsplit('.', 1)[0] + ".docx"
-        return redirect(context['file_name'])
-    return render(request, 'index.html', context)
+    context = {} 
+    # sourcery skip: merge-dict-assign, move-assign, remove-unnecessary-else, swap-if-else-branches, use-assigned-variable
+    if request.method == 'POST':  
+        form = Upload(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            NameOfFile = request.FILES['file'].name
+            file_converter = "media/" + NameOfFile
+            pdf_file = file_converter
+            parse(pdf_file, start=0, end=None)
+            context['file_name'] = "/media/" + NameOfFile.rsplit('.', 1)[0] + ".docx"
+            return redirect(context['file_name'])
+        else:
+            return HttpResponse("File not supported!")
+    else:  
+        form = Upload()
+        return render(request,"index.html",{'form': form})
+
