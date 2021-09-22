@@ -15,14 +15,12 @@ sitemaps = {'sitemap': StaticViewsSitemap}
 
 urlpatterns = [
     path('', views.main),
-    path('base/', views.base, name='base'),
+    #path('base/', views.base, name='base'),
     path('home/', views.main, name='home'),
-    path('media/',views.media, name='media'),
+    #path('media/',views.media, name='media'),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps},
-     name='django.contrib.sitemaps.views.sitemap')
+     name='django.contrib.sitemaps.views.sitemap'),
 ]
-
-
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

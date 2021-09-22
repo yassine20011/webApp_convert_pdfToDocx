@@ -1,4 +1,4 @@
-const input = document.getElementById("upload");
+const input = document.getElementById("id_file");
 const text = document.getElementById("span");
 const btn = document.getElementById("upload-btn");
 
@@ -12,3 +12,4 @@ input.addEventListener("change", () => {
    else
     btn.classList.remove("chosen")
 })
+
