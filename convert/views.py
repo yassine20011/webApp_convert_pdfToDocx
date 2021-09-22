@@ -10,7 +10,7 @@ def main(request):
         if form.is_valid():
             form.save()
             NameOfFile = request.FILES['file'].name
-            file_converter = "media/" + NameOfFile
+            file_converter = "/home/ubuntu/yassine/media/" + NameOfFile
             pdf_file = file_converter
             parse(pdf_file, start=0, end=None)
             context['file_name'] = "/media/" + NameOfFile.rsplit('.', 1)[0] + ".docx"
