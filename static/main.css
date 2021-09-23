@@ -126,25 +126,7 @@ p{
   padding: 0 25px;
 }
 
-.edit1
-{
-    background-color:white;
-    border: 1px solid rgb(25, 157, 244);
-    color: white;
-    color: rgb(25, 157, 244);
-    height: 45px;
-    width: 150px;
-    border-radius: 30px;
-    transition: all ease-out 200ms;
-    text-align: center;
-    font-size: 18px;
-}
 
-.edit1:not(.chosen):hover
-{   color: white;
-    background: rgb(25, 157, 244);
-    box-shadow: 10px  rgb(19, 113, 175);
-}
 
 .form-control{
     max-width: 50%;
