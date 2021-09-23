@@ -99,7 +99,7 @@ p{
     text-align: center;
     position:relative;
     left: 0px;
-    top: 70px;
+    top: 50px;
     margin:20px 5px;
 }
 
@@ -130,6 +130,7 @@ p{
 
 .edit1
 {
+    position: fixed;
     background-color:white;
     border: 1px solid rgb(25, 157, 244);
     color: white;
