@@ -79,14 +79,27 @@ p{
     margin: 0 5px;
 }
 
-.text-1{font-family: 'Kiwi Maru', serif;
+.text-1{
+    font-family: 'Kiwi Maru', serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 35px;
+    font:bold;
+    text-align: center;
+    position:relative;
+    left: 0px;
+    top: 50px;
+    margin:20px 5px;
+}
+
+.text-2{
+    font-family: 'Kiwi Maru', serif;
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
     font:bold;
     text-align: center;
     position:relative;
     left: 0px;
-    top: 50px;
+    top: 70px;
     margin:20px 5px;
 }
 

@@ -16,7 +16,8 @@ def main(request):
             context['file_name'] = "/media/" + NameOfFile.rsplit('.', 1)[0] + ".docx"
             return redirect(context['file_name'])
         else:
-            return HttpResponse("File not supported!")
+            request.session['File-supported'] = "File not supported!"
+            return render(request, 'index.html')
     else:  
         form = Upload()
         return render(request,"index.html",{'form': form})
