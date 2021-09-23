@@ -199,3 +199,16 @@ p{
     height: 500px;
 }
 
+@media only screen and (max-width: 411px) {
+    .container-file{
+        background:#fff;
+        border: 1px solid rgb(0, 0, 0); 
+        border-radius: 2px;
+        position: relative;
+        top: 100px;
+        overflow: hidden;
+        align-items: center;
+        height: 435px;
+        width: 80%;
+    }
+  }
