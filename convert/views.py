@@ -1,7 +1,11 @@
 from django.http import HttpResponse 
-from django.shortcuts import render, redirect 
+from django.shortcuts import get_object_or_404, render, redirect 
 from .forms import *
 from pdf2docx import parse
+from convert.models import Snippet
+
+
+
 def main(request):
     context = {} 
     # sourcery skip: merge-dict-assign, move-assign, remove-unnecessary-else, swap-if-else-branches, use-assigned-variable
@@ -22,3 +26,7 @@ def main(request):
         form = Upload()
         return render(request,"index.html",{'form': form})
 
+
+def Snippet_detail(request, slug):
+    snippet = get_object_or_404(Snippet, slug=slug)
+    return HttpResponse(f'This should be the detail view for the slug of {slug}')

@@ -1,4 +1,5 @@
 
+from convert.models import Snippet
 from os import name
 from django.contrib import sitemaps
 from django.urls import path
@@ -7,16 +8,20 @@ from django.conf.urls.static import static
 
 from . import views
 from django.contrib.sitemaps.views import sitemap
-from convert.sitemaps import StaticViewsSitemap
+from convert.sitemaps import SnippetSitemap, StaticViewsSitemap
 from django.views.static import serve
 
 
-sitemaps = {'sitemap': StaticViewsSitemap}
+sitemaps = {
+    'sitemap': StaticViewsSitemap,
+    'Snippet': SnippetSitemap
+    }
 
 urlpatterns = [
     path('', views.main),
     #path('base/', views.base, name='base'),
     path('home/', views.main, name='home'),
+    path('<slug:slug>/', views.Snippet_detail),
     #path('media/',views.media, name='media'),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps},
      name='django.contrib.sitemaps.views.sitemap'),
