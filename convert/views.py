@@ -1,8 +1,10 @@
+from django.contrib.sites.models import Site
 from django.http import HttpResponse 
 from django.shortcuts import get_object_or_404, render, redirect 
 from .forms import *
 from pdf2docx import parse
 from convert.models import Snippet
+from django.contrib.sites.requests import RequestSite
 
 
 

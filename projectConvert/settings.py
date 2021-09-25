@@ -36,12 +36,23 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'django.contrib.sitemaps',
     'maintenancemode',
     'convert',
+    'robots', # => pip install django-robots
 ]
 
 SITE_ID = 1
+
+ROBOTS_USE_SITEMAP = True
+ROBOTS_SITEMAP_URLS = [
+    'http://www.freeconvert.tk/sitemap.xml',
+]
+ROBOTS_SITEMAP_VIEW_NAME = 'cached-sitemap'
+ROBOTS_USE_HOST = True
+ROBOTS_USE_SCHEME_IN_HOST = True
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
