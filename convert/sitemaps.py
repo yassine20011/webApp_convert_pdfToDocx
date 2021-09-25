@@ -19,6 +19,6 @@ class SnippetSitemap(sitemaps.Sitemap):
     
     priority  = 1.0
     changefreq = "daily"
-    
+
     def items(self):
-        return Snippet.objects.all()
+        return Snippet.objects.all().order_by('id')
