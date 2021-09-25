@@ -3,4 +3,4 @@ User-Agent: *
 Disallow: /media
 
 
-Sitemap: https://freeconvert.com/sitemap.xml
+Sitemap: https://freeconvert.tk/sitemap.xml
