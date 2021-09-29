@@ -29,7 +29,7 @@ urlpatterns = [
     path('home/', views.main, name='home'),
     path('<slug:slug>/', views.Snippet_detail),
     url(r'^sitemap.xml$', cache_page(60*60*24)(sitemap_view), {'sitemaps': sitemaps,'content_type':'application/xml'}),
-    url(r'^robots\.txt', include('robots.urls')),
+    url(r'^Robots\.txt', include('robots.urls')),
     #path('media/',views.media, name='media'),
     #url(r'^sitemap1\.xml$', sitemap,{'sitemaps':sitemaps,'content_type':'application/xml'},name='django.contrib.sitemaps.views.sitemap'),
     #path("robots.txt",TemplateView.as_view(template_name="robots.txt", content_type="text/plain"))
