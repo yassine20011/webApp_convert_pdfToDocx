@@ -28,7 +28,6 @@ def main(request):
         form = Upload()
         return render(request,"index.html",{'form': form})
 
-
 def Snippet_detail(request, slug):
     snippet = get_object_or_404(Snippet, slug=slug)
     return HttpResponse(f'This should be the detail view for the slug of {slug}')
