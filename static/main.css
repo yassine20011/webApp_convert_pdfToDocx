@@ -3,6 +3,8 @@
 
 body {
   overflow-x: hidden;
+  min-height: 100vh;
+
 }
 
 input[type="file"] {
@@ -193,20 +195,19 @@ p {
   height: 500px;
 }
 
-@media only screen and (max-width: 426px) {
-  .container-file {
-    background: #fff;
-    border: 1px solid #aaa;
-    border-radius: 14px;
-    position: relative;
-    top: 100px;
-    overflow: hidden;
+@media only screen and (max-width: 500px) {
+  .convert-button {
+    position: sticky, absolute;
     align-items: center;
-    height: 435px;
+    overflow: hidden;
+    bottom: 0px;
+    top: 25px;
+    border-radius: 30px;
+    padding: 0 25px;
   }
 }
 
-@media only screen and (max-width: 458px) {
+@media only screen and (max-width: 388px) {
   .container-file {
     background: #fff;
     border: 1px solid #aaa;
@@ -215,11 +216,10 @@ p {
     top: 100px;
     overflow: hidden;
     align-items: center;
-    height: 350px;
-    width: 90%;
+    height: 410px;
   }
   .convert-button {
-    position: relative;
+    position: sticky, absolute;
     align-items: center;
     overflow: hidden;
     bottom: 0px;

@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 import os
 from pathlib import Path
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -45,10 +46,10 @@ INSTALLED_APPS = [
 
 SITE_ID = 1
 
-ROBOTS_USE_SITEMAP = True
 ROBOTS_SITEMAP_URLS = [
     'http://www.freeconvert.tk/sitemap.xml',
 ]
+ROBOTS_USE_SITEMAP = True
 ROBOTS_SITEMAP_VIEW_NAME = 'cached-sitemap'
 ROBOTS_USE_HOST = True
 ROBOTS_USE_SCHEME_IN_HOST = True
@@ -66,6 +67,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware', 
     'maintenancemode.middleware.MaintenanceModeMiddleware',
 ]
+
 
 MAINTENANCE_MODE = False
 
