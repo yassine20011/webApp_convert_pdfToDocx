@@ -21,9 +21,10 @@ def main(request):
             parse(pdf_file, start=0, end=None)
             context['file_name'] = "/media/" + NameOfFile.rsplit('.', 1)[0] + ".docx"
             return redirect(context['file_name'])
+            
         else:
             request.session['File-supported'] = "File not supported!"
-            return render(request, 'index.html')
+            return HttpResponse("File not supported!")
     else:  
         form = Upload()
         return render(request,"index.html",{'form': form})
