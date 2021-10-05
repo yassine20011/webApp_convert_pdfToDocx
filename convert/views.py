@@ -1,5 +1,6 @@
+from django import http
 from django.contrib.sites.models import Site
-from django.http import HttpResponse 
+from django.http import HttpResponse, response 
 from django.shortcuts import get_object_or_404, render, redirect 
 from .forms import *
 from pdf2docx import parse
@@ -11,20 +12,19 @@ from django.contrib.sites.requests import RequestSite
 def main(request):
     context = {} 
     # sourcery skip: merge-dict-assign, move-assign, remove-unnecessary-else, swap-if-else-branches, use-assigned-variable
-    if request.method == 'POST':  
+    if request.method == 'POST':
         form = Upload(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             NameOfFile = request.FILES['file'].name
-            file_converter = "/home/ubuntu/yassine/media/" + NameOfFile
+            file_converter = "/media/" + NameOfFile
             pdf_file = file_converter
             parse(pdf_file, start=0, end=None)
             context['file_name'] = "/media/" + NameOfFile.rsplit('.', 1)[0] + ".docx"
             return redirect(context['file_name'])
-            
         else:
-            request.session['File-supported'] = "File not supported!"
-            return HttpResponse("File not supported!")
+            context['alert'] = 0
+            return render(request,'index.html',context)
     else:  
         form = Upload()
         return render(request,"index.html",{'form': form})

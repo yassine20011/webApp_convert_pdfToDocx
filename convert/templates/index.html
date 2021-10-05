@@ -228,6 +228,12 @@
             <center>
                 <footer>All rights reserved. copyright © 2021</footer>
             </center>
+            <script>
+                let alertOn = "{{ alert }}";
+                if (alertOn == "0"){
+                    alert('File not supported!')
+                }
+            </script>
             <script src="{% static 'main.js' %}"></script>
             <script src="{% static 'bootstrap.js' %}"></script>
             <script src="{% static 'bootstrap2.js' %}"></script>
