@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '@wo$r)7w!=u0_uc2o$t8-!k(nsj1n4r*-7ym6qfp!7b+c&ijdm'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['m.freeconvert.tk','127.0.0.1', '52.45.165.238', 'www.freeconvert.tk', 'freeconvert.tk']
 
