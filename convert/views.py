@@ -19,9 +19,9 @@ def main(request):
         if form.is_valid():
             form.save()
             NameOfFile = request.FILES['file'].name
-            file_converter = "/home/ubuntu/yassine/media/" + NameOfFile
+            file_converter = "media/" + NameOfFile
             pdf_file = file_converter
-            parse(pdf_file, start=0, end=None)
+            parse(pdf_file)
             context['file_name'] = "/media/" + NameOfFile.rsplit('.', 1)[0] + ".docx"
             return redirect(context['file_name'])
         else:
