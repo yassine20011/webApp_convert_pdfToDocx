@@ -5,10 +5,9 @@ from pdf2docx import parse
 from convert.models import Snippet
 import requests
 
-URL = "http://127.0.0.1:8000"
 
-
-URL = "http://127.0.0.1:8000"
+URL = "https://freeconvert.tk/"
+#URL = "http://127.0.0.1:8000"
 
 def check404(url, NameOfFile):
     file_converter = "/home/ubuntu/yassine/media/" + NameOfFile
