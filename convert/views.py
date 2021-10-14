@@ -3,6 +3,28 @@ from django.shortcuts import get_object_or_404, render, redirect
 from .forms import *
 from pdf2docx import parse
 from convert.models import Snippet
+import requests
+
+URL = "http://127.0.0.1:8000"
+
+
+URL = "http://127.0.0.1:8000"
+
+def check404(url, NameOfFile):
+    file_converter = "/home/ubuntu/yassine/media/" + NameOfFile
+    #file_converter = "media/" + NameOfFile
+    pdf_file = file_converter
+    try:
+        parse(pdf_file)
+    except RuntimeError:
+        redirect('/')
+    r = requests.get(URL+"/"+url)
+    print(r.status_code)
+    if r.status_code != 200:
+        return redirect("/")
+    else:
+        return redirect(url)
+
 
 def main(request):
     context = {} 
@@ -12,26 +34,11 @@ def main(request):
         if form.is_valid():
             form.save()
             NameOfFile = request.FILES['file'].name
-            file_converter = "/home/ubuntu/yassine/media/" + NameOfFile
-            #file_converter = "media/" + NameOfFile
-            pdf_file = file_converter
-            c_True = True
-            while c_True:
-                try:
-                    parse(pdf_file)
-                except RuntimeError:
-                    redirect('/')
-                context['file_name'] = "/media/" + NameOfFile.rsplit('.', 1)[0] + ".docx"
-                c_True = False
-                return redirect(context['file_name'])
-            else:
-                c_True = True
+            context['file_name'] = "media/" + NameOfFile.rsplit('.', 1)[0] + ".docx"
+            return check404(context['file_name'], NameOfFile)
     else:  
         form = Upload()
         return render(request,"index.html",{'form': form})
-
-
-
 
 def Snippet_detail(request, slug):
     snippet = get_object_or_404(Snippet, slug=slug)
