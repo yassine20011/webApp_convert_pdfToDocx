@@ -8,7 +8,6 @@ from .models import Snippet
 class StaticViewsSitemap(sitemaps.Sitemap):
     priority  = 1.0
     changefreq = "daily"
-    x_robots_tag
     def items(self):
         return [
         'home',
