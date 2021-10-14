@@ -1,4 +1,4 @@
-from django.http.response import Http404
+from django.http.response import HttpResponse
 from django.shortcuts import get_object_or_404, render, redirect 
 from .forms import *
 from pdf2docx import parse
@@ -12,8 +12,8 @@ def main(request):
         if form.is_valid():
             form.save()
             NameOfFile = request.FILES['file'].name
-            #file_converter = "/home/ubuntu/yassine/media/" + NameOfFile
-            file_converter = "media/" + NameOfFile
+            file_converter = "/home/ubuntu/yassine/media/" + NameOfFile
+            #file_converter = "media/" + NameOfFile
             pdf_file = file_converter
             c_True = True
             while c_True:
