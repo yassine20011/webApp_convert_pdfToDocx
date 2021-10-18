@@ -1,0 +1,1986 @@
+<style>
+    .responsive {
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
+        /*border: 1px solid #ddd;*/
+    }
+
+    .responsive th, .responsive td {
+        text-align: left;
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+
+    }
+
+    .responsive tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    .responsive tr {
+        border: 1px solid #ddd;
+    }
+
+    .rfloat {
+
+        float: right;
+
+    }
+
+</style>
+
+<style>
+
+
+
+
+
+</style>
+<script>
+    function printContent(el) {
+var restorepage =document.body.innerHTML;
+var printContent =document.getElementById(el).innerHTML;
+        document.body.innerHTML=printContent;
+        window.print();
+        document.body.innerHTML=restorepage;
+
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="RkftOdjSuTMl5JehOi0nQndKybXam4V3Lw4BjIxl">
+
+    <title>E-ServiceFSJES</title>
+
+    
+    
+    <link rel="stylesheet" href="http://e-services.fsjes.uca.ma/Theme_LTE/bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="http://e-services.fsjes.uca.ma/Theme_LTE/bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="http://e-services.fsjes.uca.ma/Theme_LTE/bower_components/select2/dist/css/select2.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="http://e-services.fsjes.uca.ma/css/style.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="http://e-services.fsjes.uca.ma/Theme_LTE/bower_components/Ionicons/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="http://e-services.fsjes.uca.ma/Theme_LTE/dist/css/AdminLTE.min.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="http://e-services.fsjes.uca.ma/Theme_LTE/dist/css/skins/_all-skins.min.css">
+    <!-- Morris chart -->
+    <link rel="stylesheet" href="http://e-services.fsjes.uca.ma/Theme_LTE/bower_components/morris.js/morris.css">
+    <!-- jvectormap -->
+    <link rel="stylesheet" href="http://e-services.fsjes.uca.ma/Theme_LTE/bower_components/jvectormap/jquery-jvectormap.css">
+    <!-- Date Picker -->
+    <link rel="stylesheet"
+          href="http://e-services.fsjes.uca.ma/Theme_LTE/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+    <!-- Daterange picker -->
+    <link rel="stylesheet"
+          href="http://e-services.fsjes.uca.ma/Theme_LTE/bower_components/bootstrap-daterangepicker/daterangepicker.css">
+    <!-- bootstrap wysihtml5 - text editor -->
+    <link rel="stylesheet" href="http://e-services.fsjes.uca.ma/Theme_LTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Google Font -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <link rel="stylesheet" href="http://e-services.fsjes.uca.ma/Theme_LTE/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="http://e-services.fsjes.uca.ma/Theme_LTE/bower_components/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="http://e-services.fsjes.uca.ma/Theme_LTE/bower_components/Ionicons/css/ionicons.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet"
+          href="http://e-services.fsjes.uca.ma/Theme_LTE/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="http://e-services.fsjes.uca.ma/Theme_LTE/dist/css/AdminLTE.min.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="http://e-services.fsjes.uca.ma/Theme_LTE/dist/css/skins/_all-skins.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js')}}"></script>
+    <![endif]-->
+
+    <!-- Google Font -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+    
+    
+    
+
+
+    <link rel="stylesheet" href="http://e-services.fsjes.uca.ma/Theme_LTE/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="http://e-services.fsjes.uca.ma/Theme_LTE/bower_components/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="http://e-services.fsjes.uca.ma/Theme_LTE/bower_components/Ionicons/css/ionicons.min.css">
+    <!-- fullCalendar -->
+    <link rel="stylesheet" href="http://e-services.fsjes.uca.ma/Theme_LTE/bower_components/fullcalendar/dist/fullcalendar.min.css">
+    <link rel="stylesheet" href="http://e-services.fsjes.uca.ma/Theme_LTE/bower_components/fullcalendar/dist/fullcalendar.print.min.css"
+          media="print">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="http://e-services.fsjes.uca.ma/dist/css/AdminLTE.min.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="http://e-services.fsjes.uca.ma/dist/css/skins/_all-skins.min.css">
+
+    <!-- Google Font -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+
+</head>
+
+<body class="hold-transition skin-blue layout-top-nav">
+<div class="wrapper">
+
+    <header class="main-header" id="app3">
+        <nav class="navbar navbar-static-top" style="position:fixed; width:100%;">
+            <div class="">
+                
+                <div>
+                    <img style="height: 70px ; width: auto; float: left; padding-right: 10px ;"
+                         class="img-responsive img- site_logo"
+                         src="http://e-services.fsjes.uca.ma/storage/images/LOGO/logocadiayyad.png " alt='logo'>
+                </div>
+                <div class="navbar-header">
+
+                    <a href="/student" class="navbar-brand"><b>
+                            E-ServiceFSJES
+
+
+                        </b></a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#navbar-collapse">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        
+                            
+                            
+
+
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+
+
+
+                                                            <li    class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mes Opérations
+                                        <span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li class="divider"></li>
+
+                                        <li   >
+                                            <a href="/student/mesdemandes">Mes Demandes<span
+                                                    class="sr-only">(current)</span></a></li>
+                                        <li class="divider"></li>
+                                        <li   >
+                                            <a href="/student/mes_reclamations">Mes Réclamations<span
+                                                    class="sr-only">(current)</span></a>
+                                        </li>
+                                        <li class="divider"></li>
+                                    </ul>
+                                </li>
+
+
+
+
+
+
+
+                                <li   class="active"
+                                      class="dropdown">
+                                    <a href="#" class="dropdown-toggle"
+                                       data-toggle="dropdown">Mes Inscriptions <span
+                                            class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+
+                                        <li class="divider"></li>
+
+
+                                        <li   class="active"  >
+                                            <a href="/student/situationpedagogique">Ma Situation Pédagogique
+                                                <span
+                                                    class="sr-only">(current)</span></a></li>
+
+                                        <li class="divider"></li>
+
+                                        <li>
+                                            <a href="/student/profile#MesServices">Mes Inscriptions Administratives
+                                                <span
+                                                    class="sr-only">(current)</span></a></li>
+                                        <li class="divider"></li>
+                                    </ul>
+                                </li>
+
+
+
+                                <li class="movemenuli"
+                                       class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examens
+                                        <span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li class="divider"></li>
+
+                                        <li>
+                                            <a href="/student/planning_exam">Calendrier des examens<span
+                                                    class="sr-only"></span></a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li class="movemenuli"
+
+                                              >
+                                            <a href="/formulaire">Cartographie
+                                                <span
+                                                    class="sr-only">(current)</span></a></li>
+                                        <li class="divider"></li>
+                                        <li class="movemenuli"
+                                              >
+                                            <a href="/student/inscriptionexam">Mon Inscription Aux Examens
+                                                <span
+                                                    class="sr-only">(current)</span></a></li>
+
+
+                                        <li class="divider"></li>
+                                    </ul>
+                                </li>
+
+
+
+
+
+                            
+
+
+
+
+
+                        
+                        <li class="">
+                            <a href="http://e-services.fsjes.uca.ma/lng/fr">
+                                
+                                Français
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+
+                        <li class="">
+                            <a href="http://e-services.fsjes.uca.ma/lng/ar">
+                                
+                                العربية
+                                
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+
+                            
+                    </ul>
+
+                </div>
+
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+
+
+
+                                                                        
+                            <!-- Notifications Menu -->
+                                <li class="dropdown notifications-menu">
+                                    <!-- Menu toggle button -->
+
+                                    <a href=http://e-services.fsjes.uca.ma/# class="dropdown-toggle" data-toggle="dropdown">
+                                        <i class="fa fa-bell-o"></i>
+                                        <span class="label label-warning" style="display: none;" id="count_globale">
+                                        {{count_globale}}
+                                    </span>
+                                    </a>
+                                    <ul class="dropdown-menu" id="notifications_container">
+                                        <li class="header">Vous avez {{count_globale}} Notifications</li>
+
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+
+                                        
+
+                                    </ul>
+                                </li>
+                                <!-- Tasks Menu -->
+                                                
+                    
+
+
+
+
+
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <!-- User Account Menu -->
+
+                        
+                            <li class="dropdown user user-menu">
+                                <!-- Menu Toggle Button -->
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <!-- The user image in the navbar-->
+                                    
+
+                                    
+
+                                                                            <img class="user-image" src="/sys_imgs/avatar.png" alt="User Avatar">
+
+
+
+
+
+
+                                    
+                                <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                                    <span class="hidden-xs">medalgamer47@gmail.com</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <!-- The user image in the menu -->
+                                    <li class="user-header">
+                                        
+                                                                                    <img class="user-image" src="/sys_imgs/avatar.png" alt="User Avatar">
+
+                                                                                <br>
+                                        <p>
+                                                                                            Yassine AMJAD
+                                            
+                                            
+                                        </p>
+                                    </li>
+                                    <!-- Menu Body -->
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                <!-- Menu Footer-->
+                                    <li class="user-footer">
+                                        <div class="pull-left">
+                                            <a href="http://e-services.fsjes.uca.ma/student/profile" class="btn btn-default btn-flat">Profile</a>
+                                        </div>
+                                        <div class="pull-right">
+                                            <a href="http://e-services.fsjes.uca.ma/logout" class="btn btn-default btn-flat"
+                                               onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a>
+                                            <form id="logout-form" action="http://e-services.fsjes.uca.ma/logout" method="POST"
+                                                  style="display: none;">
+                                                <input type="hidden" name="_token" value="RkftOdjSuTMl5JehOi0nQndKybXam4V3Lw4BjIxl">
+                                            </form>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+
+                                            </ul>
+                    </li>
+                    </ul>
+                    
+                    <img style="height: 70px ; width: auto;  padding-left: 10px ;" class="img-responsive img- site_logo"
+                         src="http://e-services.fsjes.uca.ma/storage/images/LOGO/unnamed.webp " alt='logo'>
+                    
+                </div>
+
+                <!-- /.navbar-custom-menu -->
+
+            </div>
+
+            <!-- /.container-fluid -->
+        </nav>
+    </header>
+    <!-- Full Width Column -->
+    <div class="content-wrapper">
+
+
+        
+
+
+        <div class="container">
+
+            <!-- Content Header (Page header) -->
+
+            
+            <section class="content-header" style="margin-top:15%;margin-bottom: 0%;">
+
+                <h1>
+                    
+
+                    
+                                                    <center>   Ma situation pédagogique  </center>
+                        
+                    
+                </h1>
+
+            </section>
+
+
+
+            <section class="content">
+
+                <br>
+            
+                <div class="container">
+
+
+    
+    
+    
+    
+
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+
+
+</div>
+
+
+                <br>
+
+                    <div class="container">
+
+        <div class="col-md-12" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+            <!-- Custom Tabs -->
+            <div class="nav-tabs-custom" id="menu">
+                <ul class="nav nav-tabs">
+                    <li id="tab3" class="active"><a href="#tab_3" data-toggle="tab"
+                                                             class="btn btn-warning">MES MODULES AFFECTES</a>
+                    </li>
+                    <li id="tab4" class="btn btn-warning"><a href="#tab_4" data-toggle="tab">NOTES DES EPREUVES</a></li>
+
+                    <li id="tab1" class="btn btn-warning"><a href="#tab_1" data-toggle="tab">RESULTAT ANNEE EN COURS</a></li>
+
+                    <li id="tab2" class=" btn btn-warning"><a href="#tab_2" data-toggle="tab"
+                                                             class="btn btn-warning">ARCHIVE DES NOTES</a></li>
+
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    <li class="pull-right"><a href="#" class="text-muted"><i class="fa fa-gear"></i></a></li>
+                </ul>
+                <div class="tab-content" id="app">
+                    
+
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    <div class="tab-pane active  " id="tab_3">
+
+                        
+
+
+                        <div class="" style="page-break-after:always;"></div>
+
+                                                    <center><h2 style="color:red">AUCUN RESULTAT POUR LE MOMENT</h2></center>
+
+                        
+
+
+                        
+
+                    </div>
+                    <div class="tab-pane  " id="tab_4">
+
+                                                    <center><h2 style="color:red">AUCUN RESULTAT POUR LE MOMENT</h2></center>
+
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+
+                        
+                        
+                        
+
+
+                    </div>
+                    <div class="tab-pane  " id="tab_1">
+
+                                                    <center><h2 style="color:red">AUCUN RESULTAT POUR LE MOMENT</h2></center>
+
+                        
+                        
+                            
+                                
+                                         
+                                         
+                                         
+                                         
+
+                                
+                            
+                        
+
+
+                    </div>
+                    <div class="tab-pane " id="tab_2">
+                           
+
+
+                                <br>
+                         <div class="col-xs-12 table-responsive">
+                                       <div  id="Semestre 1/2020-2021/9.429" >
+               <center><b><h4 style="border: 1px solid black; padding:2px;">
+                           AMJAD Yassine
+                           <br>
+                           <br>
+                           Apogee: 1901945 / CNE: G130535669/ CIN: EE951460
+                       </h4></b></center><br>
+               <br>
+    <table id="table_1" class="table table-bordered table-striped" width="100%">
+
+        <thead>
+
+        <center>
+            <h3 style="color:#0086ff">Releves de note spécifique du Semestre 1
+                <br> - Note: 9.429 <br>- Resultat: NV
+                <br> Année
+                universitaire 2020-2021</h3>
+
+
+
+
+        </center>
+        <br>
+        <tr>
+
+            <th>MODULE</th>
+            <th>TYPE</th>
+            <th>SESSION</th>
+            <th>NOTE/BAREME</th>
+            <th>RESULTAT</th>
+            <th>ANNEE UNIVERSITAIRE</th>
+
+        </tr>
+        </thead>
+        <tbody>
+                                            
+                
+                            
+                
+                            
+                
+                    
+                        <tr class="">
+                            
+
+                                
+                                    
+
+
+
+
+
+
+
+
+
+
+                                    <td>
+                                        Statistique descriptive
+                                    </td>
+                                    <td>
+                                        MOD
+                                    </td>
+
+                                    <td>
+                                                                                    <label
+                                                    style="background-color: #14d1ff; padding:5px">
+                                                <center>SESS  1</center>
+                                            </label>
+                                        
+                                    </td>
+                                    <td>
+                                        <span>8 / 20</span>
+                                    </td>
+                                    <td><span>NV</span></td>
+                                    <td>
+                                        2020-2021
+                                    </td>
+
+                                                                                    </tr>
+                                    
+                            
+                
+                    
+                        <tr class="">
+                            
+
+                                                                                    </tr>
+                                    
+                            
+                
+                    
+                        <tr class="">
+                            
+
+                                
+                                    
+
+
+
+
+
+
+
+
+
+
+                                    <td>
+                                        Microéconomie I
+                                    </td>
+                                    <td>
+                                        MOD
+                                    </td>
+
+                                    <td>
+                                                                                    <label
+                                                    style="background-color: #14d1ff; padding:5px">
+                                                <center>SESS  1</center>
+                                            </label>
+                                        
+                                    </td>
+                                    <td>
+                                        <span>8.5 / 20</span>
+                                    </td>
+                                    <td><span>NV</span></td>
+                                    <td>
+                                        2020-2021
+                                    </td>
+
+                                                                                    </tr>
+                                    
+                            
+                
+                    
+                        <tr class="">
+                            
+
+                                                                                    </tr>
+                                    
+                            
+                
+                    
+                        <tr class="">
+                            
+
+                                
+                                    
+
+
+
+
+
+
+
+
+
+
+                                    <td>
+                                        Introduction à l&#039;Economie
+                                    </td>
+                                    <td>
+                                        MOD
+                                    </td>
+
+                                    <td>
+                                                                                    <label
+                                                    style="background-color: #14d1ff; padding:5px">
+                                                <center>SESS  1</center>
+                                            </label>
+                                        
+                                    </td>
+                                    <td>
+                                        <span>11 / 20</span>
+                                    </td>
+                                    <td><span>V</span></td>
+                                    <td>
+                                        2020-2021
+                                    </td>
+
+                                                                                    </tr>
+                                    
+                            
+                
+                    
+                        <tr class="">
+                            
+
+                                                                                    </tr>
+                                    
+                            
+                
+                            
+                
+                            
+                
+                    
+                        <tr class="">
+                            
+
+                                
+                                    
+
+
+
+
+
+
+
+
+
+
+                                    <td>
+                                        Analyse mathématique
+                                    </td>
+                                    <td>
+                                        MOD
+                                    </td>
+
+                                    <td>
+                                                                                    <label
+                                                    style="background-color: #14d1ff; padding:5px">
+                                                <center>SESS  1</center>
+                                            </label>
+                                        
+                                    </td>
+                                    <td>
+                                        <span>9 / 20</span>
+                                    </td>
+                                    <td><span>NV</span></td>
+                                    <td>
+                                        2020-2021
+                                    </td>
+
+                                                                                    </tr>
+                                    
+                            
+                
+                    
+                        <tr class="">
+                            
+
+                                                                                    </tr>
+                                    
+                            
+                
+                    
+                        <tr class="">
+                            
+
+                                
+                                    
+
+
+
+
+
+
+
+
+
+
+                                    <td>
+                                        Comptabilité générale I
+                                    </td>
+                                    <td>
+                                        MOD
+                                    </td>
+
+                                    <td>
+                                                                                    <label
+                                                    style="background-color: #14d1ff; padding:5px">
+                                                <center>SESS  1</center>
+                                            </label>
+                                        
+                                    </td>
+                                    <td>
+                                        <span>10 / 20</span>
+                                    </td>
+                                    <td><span>V</span></td>
+                                    <td>
+                                        2020-2021
+                                    </td>
+
+                                                                                    </tr>
+                                    
+                            
+                
+                    
+                        <tr class="">
+                            
+
+                                                                                    </tr>
+                                    
+                            
+                
+                    
+                        <tr class="">
+                            
+
+                                
+                                    
+
+
+
+
+
+
+
+
+
+
+                                    <td>
+                                        Langues et Terminologie I
+                                    </td>
+                                    <td>
+                                        MOD
+                                    </td>
+
+                                    <td>
+                                                                                    <label
+                                                    style="background-color: #14d1ff; padding:5px">
+                                                <center>SESS  1</center>
+                                            </label>
+                                        
+                                    </td>
+                                    <td>
+                                        <span>9 / 20</span>
+                                    </td>
+                                    <td><span>NV</span></td>
+                                    <td>
+                                        2020-2021
+                                    </td>
+
+                                                                                    </tr>
+                                    
+                            
+                
+                    
+                        <tr class="">
+                            
+
+                                                                                    </tr>
+                                    
+                            
+                
+                    
+                        <tr class="">
+                            
+
+                                
+                                    
+
+
+
+
+
+
+
+
+
+
+                                    <td>
+                                        Management I
+                                    </td>
+                                    <td>
+                                        MOD
+                                    </td>
+
+                                    <td>
+                                                                                    <label
+                                                    style="background-color: #14d1ff; padding:5px">
+                                                <center>SESS  1</center>
+                                            </label>
+                                        
+                                    </td>
+                                    <td>
+                                        <span>10.5 / 20</span>
+                                    </td>
+                                    <td><span>V</span></td>
+                                    <td>
+                                        2020-2021
+                                    </td>
+
+                                                                                    </tr>
+                                    
+                            
+                
+                    
+                        <tr class="">
+                            
+
+                                                                                    </tr>
+                                    
+                            
+                
+                            
+                
+                            
+                
+                            
+                
+                            
+                
+                            
+                
+                            
+                
+                            
+                
+                            
+                
+                            
+                
+                            
+                
+                            
+                
+                            
+                
+                            
+                
+                            
+                
+                            
+                
+            
+
+
+        
+        </tbody>
+
+
+    </table>
+
+               <p class="rfloat" style="font-size: small; padding-right: 20px; ">
+
+                   Fait à Marrakech, le 
+
+                   14-10-2021
+
+               </p>
+
+    
+
+
+           </div>
+
+   <div class="row no-print" style="text-align: right;">
+       <div class="col-xs-12">
+
+           <button onclick="printContent('Semestre 1/2020-2021/9.429')" style="margin-right: 5px;">
+                 <i class="fa fa-print "></i> Imrpimer</button>
+                    <a href="/student/reclamation/0">
+                        <button type="button" class="btn btn-warning pull-right" >
+                            <i class="fa  fa-external-link"></i> Réclamer
+                        </button>
+                    </a>
+           <a href="http://e-services.fsjes.uca.ma/student/situationpedagogique"
+              download="Semestre 1/2020-2021/9.429.pdf">
+               <button type="button" class="btn btn-info pull-right" >
+                   <i class="fa  fa-external-link"></i> Génerer Pdf
+               </button>
+
+ </a>
+                                     </div>
+                                 </div>
+
+                                                                     <div  id="Semestre 2/2020-2021/7.5" >
+               <center><b><h4 style="border: 1px solid black; padding:2px;">
+                           AMJAD Yassine
+                           <br>
+                           <br>
+                           Apogee: 1901945 / CNE: G130535669/ CIN: EE951460
+                       </h4></b></center><br>
+               <br>
+    <table id="table_1" class="table table-bordered table-striped" width="100%">
+
+        <thead>
+
+        <center>
+            <h3 style="color:#0086ff">Releves de note spécifique du Semestre 2
+                <br> - Note: 7.5 <br>- Resultat: AJ
+                <br> Année
+                universitaire 2020-2021</h3>
+
+
+
+
+        </center>
+        <br>
+        <tr>
+
+            <th>MODULE</th>
+            <th>TYPE</th>
+            <th>SESSION</th>
+            <th>NOTE/BAREME</th>
+            <th>RESULTAT</th>
+            <th>ANNEE UNIVERSITAIRE</th>
+
+        </tr>
+        </thead>
+        <tbody>
+                                            
+                
+                            
+                
+                            
+                
+                            
+                
+                            
+                
+                            
+                
+                            
+                
+                            
+                
+                            
+                
+                            
+                
+                            
+                
+                            
+                
+                            
+                
+                            
+                
+                            
+                
+                            
+                
+                            
+                
+                            
+                
+                            
+                
+                            
+                
+                            
+                
+                    
+                        <tr class="">
+                            
+
+                                
+                                    
+
+
+
+
+
+
+
+
+
+
+                                    <td>
+                                        Langue et Terminologie II
+                                    </td>
+                                    <td>
+                                        MOD
+                                    </td>
+
+                                    <td>
+                                                                                    <label
+                                                    style="background-color: #14d1ff; padding:5px">
+                                                <center>SESS  1</center>
+                                            </label>
+                                        
+                                    </td>
+                                    <td>
+                                        <span>7.5 / 20</span>
+                                    </td>
+                                    <td><span>NV</span></td>
+                                    <td>
+                                        2020-2021
+                                    </td>
+
+                                                                                    </tr>
+                                    
+                            
+                
+                    
+                        <tr class="">
+                            
+
+                                                                                    </tr>
+                                    
+                            
+                
+                    
+                        <tr class="">
+                            
+
+                                
+                                    
+
+
+
+
+
+
+
+
+
+
+                                    <td>
+                                        Microéconomie II
+                                    </td>
+                                    <td>
+                                        MOD
+                                    </td>
+
+                                    <td>
+                                                                                    <label
+                                                    style="background-color: #14d1ff; padding:5px">
+                                                <center>SESS  1</center>
+                                            </label>
+                                        
+                                    </td>
+                                    <td>
+                                        <span>8 / 20</span>
+                                    </td>
+                                    <td><span>NV</span></td>
+                                    <td>
+                                        2020-2021
+                                    </td>
+
+                                                                                    </tr>
+                                    
+                            
+                
+                    
+                        <tr class="">
+                            
+
+                                                                                    </tr>
+                                    
+                            
+                
+                    
+                        <tr class="">
+                            
+
+                                
+                                    
+
+
+
+
+
+
+
+
+
+
+                                    <td>
+                                        Macroéconomie
+                                    </td>
+                                    <td>
+                                        MOD
+                                    </td>
+
+                                    <td>
+                                                                                    <label
+                                                    style="background-color: #14d1ff; padding:5px">
+                                                <center>SESS  1</center>
+                                            </label>
+                                        
+                                    </td>
+                                    <td>
+                                        <span>6 / 20</span>
+                                    </td>
+                                    <td><span>NV</span></td>
+                                    <td>
+                                        2020-2021
+                                    </td>
+
+                                                                                    </tr>
+                                    
+                            
+                
+                    
+                        <tr class="">
+                            
+
+                                                                                    </tr>
+                                    
+                            
+                
+                    
+                        <tr class="">
+                            
+
+                                
+                                    
+
+
+
+
+
+
+
+
+
+
+                                    <td>
+                                        Comptabilité générale II
+                                    </td>
+                                    <td>
+                                        MOD
+                                    </td>
+
+                                    <td>
+                                                                                    <label
+                                                    style="background-color: #14d1ff; padding:5px">
+                                                <center>SESS  1</center>
+                                            </label>
+                                        
+                                    </td>
+                                    <td>
+                                        <span>10 / 20</span>
+                                    </td>
+                                    <td><span>VAR</span></td>
+                                    <td>
+                                        2020-2021
+                                    </td>
+
+                                                                                    </tr>
+                                    
+                            
+                
+                    
+                        <tr class="">
+                            
+
+                                                                                    </tr>
+                                    
+                            
+                
+                    
+                        <tr class="">
+                            
+
+                                
+                                    
+
+
+
+
+
+
+
+
+
+
+                                    <td>
+                                        Probabilités
+                                    </td>
+                                    <td>
+                                        MOD
+                                    </td>
+
+                                    <td>
+                                                                                    <label
+                                                    style="background-color: #14d1ff; padding:5px">
+                                                <center>SESS  1</center>
+                                            </label>
+                                        
+                                    </td>
+                                    <td>
+                                        <span>8 / 20</span>
+                                    </td>
+                                    <td><span>NV</span></td>
+                                    <td>
+                                        2020-2021
+                                    </td>
+
+                                                                                    </tr>
+                                    
+                            
+                
+                    
+                        <tr class="">
+                            
+
+                                                                                    </tr>
+                                    
+                            
+                
+                    
+                        <tr class="">
+                            
+
+                                
+                                    
+
+
+
+
+
+
+
+
+
+
+                                    <td>
+                                        Management II
+                                    </td>
+                                    <td>
+                                        MOD
+                                    </td>
+
+                                    <td>
+                                                                                    <label
+                                                    style="background-color: #14d1ff; padding:5px">
+                                                <center>SESS  1</center>
+                                            </label>
+                                        
+                                    </td>
+                                    <td>
+                                        <span>10 / 20</span>
+                                    </td>
+                                    <td><span>V</span></td>
+                                    <td>
+                                        2020-2021
+                                    </td>
+
+                                                                                    </tr>
+                                    
+                            
+                
+                    
+                        <tr class="">
+                            
+
+                                                                                    </tr>
+                                    
+                            
+                
+                    
+                        <tr class="">
+                            
+
+                                
+                                    
+
+
+
+
+
+
+
+
+
+
+                                    <td>
+                                        Algèbre &amp; math financière
+                                    </td>
+                                    <td>
+                                        MOD
+                                    </td>
+
+                                    <td>
+                                                                                    <label
+                                                    style="background-color: #14d1ff; padding:5px">
+                                                <center>SESS  1</center>
+                                            </label>
+                                        
+                                    </td>
+                                    <td>
+                                        <span>3 / 20</span>
+                                    </td>
+                                    <td><span>NV</span></td>
+                                    <td>
+                                        2020-2021
+                                    </td>
+
+                                                                                    </tr>
+                                    
+                            
+                
+                    
+                        <tr class="">
+                            
+
+                                                                                    </tr>
+                                    
+            
+
+
+        
+        </tbody>
+
+
+    </table>
+
+               <p class="rfloat" style="font-size: small; padding-right: 20px; ">
+
+                   Fait à Marrakech, le 
+
+                   14-10-2021
+
+               </p>
+
+    
+
+
+           </div>
+
+   <div class="row no-print" style="text-align: right;">
+       <div class="col-xs-12">
+
+           <button onclick="printContent('Semestre 2/2020-2021/7.5')" style="margin-right: 5px;">
+                 <i class="fa fa-print "></i> Imrpimer</button>
+                    <a href="/student/reclamation/0">
+                        <button type="button" class="btn btn-warning pull-right" >
+                            <i class="fa  fa-external-link"></i> Réclamer
+                        </button>
+                    </a>
+           <a href="http://e-services.fsjes.uca.ma/student/situationpedagogique"
+              download="Semestre 2/2020-2021/7.5.pdf">
+               <button type="button" class="btn btn-info pull-right" >
+                   <i class="fa  fa-external-link"></i> Génerer Pdf
+               </button>
+
+ </a>
+                                     </div>
+                                 </div>
+
+                                                                                      </div>
+
+
+                        
+
+
+
+                        
+
+                    </div>
+
+
+                </div>
+                <!-- nav-tabs-custom -->
+            </div>
+        </div>
+
+    </div>
+
+
+
+                            </section>
+                    <!-- /.content -->
+
+        </div>
+
+        <!-- /.container -->
+    </div>
+    <!-- /.content-wrapper -->
+    <footer class="main-footer">
+
+        <row>
+            
+            
+
+            <center>
+                <a class="btn btn-default" href="http://e-services.fsjes.uca.ma/lng/fr">
+                    Français
+                </a>
+                <a class="btn btn-default" href="http://e-services.fsjes.uca.ma/lng/ar">
+                    العربية
+                </a>
+            </center>
+
+            
+        </row>
+
+
+        <div class="container" id="foot">
+            <div class="pull-right hidden-xs">
+                <b>Version</b> 1.0.0
+            </div>
+            <strong>Copyright &copy; 2020 <a href="">FSJES</a>.</strong> All rights
+            reserved.
+        </div>
+        <!-- /.container -->
+    </footer>
+</div>
+<!-- ./wrapper -->
+
+
+<!-- jQuery 3 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- jQuery UI 1.11.4 -->
+<script src="http://e-services.fsjes.uca.ma/Theme_LTE/bower_components/jquery-ui/jquery-ui.min.js" defer></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+
+<script>
+    $.widget.bridge('uibutton', $.ui.button);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<!-- jQuery 3 -->
+
+<!-- Bootstrap 3.3.7 -->
+<script src="http://e-services.fsjes.uca.ma/Theme_LTE/bower_components/bootstrap/dist/js/bootstrap.min.js" defer></script>
+
+<script src="http://e-services.fsjes.uca.ma/Theme_LTE/bower_components/select2/dist/js/select2.full.min.js" defer></script>
+
+<!-- FastClick -->
+<script src="http://e-services.fsjes.uca.ma/Theme_LTE/bower_components/fastclick/lib/fastclick.js" defer></script>
+<!-- AdminLTE App -->
+<script src="http://e-services.fsjes.uca.ma/Theme_LTE/dist/js/adminlte.min.js" defer></script>
+<!-- Sparkline -->
+<script src="http://e-services.fsjes.uca.ma/Theme_LTE/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js" defer></script>
+<!-- jvectormap  -->
+<script src="http://e-services.fsjes.uca.ma/Theme_LTE/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js" defer></script>
+<script src="http://e-services.fsjes.uca.ma/Theme_LTE/plugins/jvectormap/jquery-jvectormap-world-mill-en.js" defer></script>
+<!-- SlimScroll -->
+<script src="http://e-services.fsjes.uca.ma/Theme_LTE/bower_components/jquery-slimscroll/jquery.slimscroll.min.js" defer></script>
+<!-- ChartJS -->
+<script src="http://e-services.fsjes.uca.ma/Theme_LTE/bower_components/chart.js/Chart.js" defer></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="http://e-services.fsjes.uca.ma/Theme_LTE/dist/js/pages/dashboard2.js" defer></script>
+<!-- AdminLTE for demo purposes -->
+<script src="http://e-services.fsjes.uca.ma/Theme_LTE/dist/js/demo.js" defer></script>
+
+
+
+
+
+<script src="http://e-services.fsjes.uca.ma/Theme_LTE/bower_components/raphael/raphael.min.js" defer></script>
+<script src="http://e-services.fsjes.uca.ma/Theme_LTE/bower_components/morris.js/morris.min.js" defer></script>
+
+<script src="http://e-services.fsjes.uca.ma/Theme_LTE/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js" defer></script>
+
+
+
+
+<script src="http://e-services.fsjes.uca.ma/Theme_LTE/bower_components/jquery-knob/dist/jquery.knob.min.js" defer></script>
+
+<script src="http://e-services.fsjes.uca.ma/Theme_LTE/bower_components/moment/min/moment.min.js" defer></script>
+<script src="http://e-services.fsjes.uca.ma/Theme_LTE/bower_components/bootstrap-daterangepicker/daterangepicker.js" defer></script>
+
+<script src="http://e-services.fsjes.uca.ma/Theme_LTE/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"
+        defer></script>
+
+<script src="http://e-services.fsjes.uca.ma/Theme_LTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js" defer></script>
+
+
+
+
+
+
+
+<script src="http://e-services.fsjes.uca.ma/Theme_LTE/dist/js/pages/dashboard.js" defer></script>
+
+
+
+
+
+
+
+
+
+
+
+<script src="http://e-services.fsjes.uca.ma/assets/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+
+<script src="http://e-services.fsjes.uca.ma/js/axios.min.js"></script>
+
+
+<script>
+    $(function () {
+        //Initialize Select2 Elements
+        $('.select2').select2()
+    })
+</script>
+
+<script>
+
+    var app3 = new Vue({
+
+        el: '#app3',
+        data: {
+            count_globale: 0,
+        },
+        methods: {
+
+            get_demandes_restantes: function () {
+                axios.get('http://e-services.fsjes.uca.ma/student/get_notifications')
+                    .then(response => {
+                        $(".li_peu_delete").remove();
+                        var count_g = 0;
+                        // console.log(count_globale)
+                        for (i = 0; i < response.data.length; i++) {
+                            count_g = count_g + response.data[i]['total'];
+                            $('#notifications_container').append('<li class="li_peu_delete">\n' +
+                                '                    <a href="/student/demande_status/' + response.data[i][['demande_id']] + '">\n' +
+                                '                      <i class="fa fa-bell"></i> ' + ' Une nouvelle action de ' + response.data[i]['label'] + "\n" +
+                                '                       <h6>' + response.data[i]['description'] + '\n</h6>' +
+                                '                    </a>\n' +
+                                '                  </li>');
+                        }
+                        this.count_globale = count_g;
+                        console.log(this.count_globale)
+                        if (this.count_globale > 0) {
+                            $('#count_globale').show();
+                        }
+                    })
+                    .catch(error => {
+                    })
+            },
+        },
+
+        mounted: function () {
+            this.get_demandes_restantes();
+            // this.intervalid1 = setInterval(function () {
+            //     this.get_demandes_restantes();
+            // }.bind(this), 500);
+        },
+
+    })
+
+
+    var app4 = new Vue({
+
+        el: '#app4',
+        data: {
+
+            count_globale: 0,
+            rdvs: [],
+            rdv: {
+                rdv_date: '',
+                rdv_heure: '',
+                rdv_dmd_id: '',
+                rdv_dmd_nature: '',
+            }
+        },
+        methods: {
+            ajax_get_mes_rdv: function () {
+                axios.get('http://e-services.fsjes.uca.ma/student/ajax_get_mes_rdv')
+                    .then(response => {
+                        this.rdvs = response.data;
+                        // console.log(this.rdvs.length);
+                        // alert(this.rdvs.length);
+                        // alert(response.date.lenght);
+                        if (this.rdvs.length > 0) {
+                            $('#app4').show(500);
+                        }
+                    })
+                    .catch(error => {
+                    })
+            },
+        },
+        mounted: function () {
+            // this.intervalid1 = setInterval(function(){
+            this.ajax_get_mes_rdv();
+            // }.bind(this), 5000);
+        },
+
+    })
+</script>
+
+
+<script>
+    // alert('4');
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

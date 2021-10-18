@@ -1,24 +1,27 @@
-from django.http.response import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render, redirect 
 from .forms import *
 from pdf2docx import parse
 from convert.models import Snippet
 import requests
+from django.contrib import messages
 
 
-URL = "https://freeconvert.tk/"
+#URL = "https://freeconvert.tk"
+URL = "http://127.0.0.1:8000"
 
-def check404(url, NameOfFile):
-    file_converter = "/home/ubuntu/yassine/media/" + NameOfFile
-    #file_converter = "media/" + NameOfFile
+def check404(request,url, NameOfFile):
+    #file_converter = "/home/ubuntu/yassine/media/" + NameOfFile
+    file_converter = "media/" + NameOfFile
     pdf_file = file_converter
     try:
         parse(pdf_file)
     except RuntimeError:
-        redirect('/')
+        pass
     r = requests.get(URL+"/"+url)
     print(r.status_code)
     if r.status_code != 200:
+        messages.error(request, "Oops! something went wrong")
         return redirect("/")
     else:
         return redirect(url)
@@ -33,7 +36,10 @@ def main(request):
             form.save()
             NameOfFile = request.FILES['file'].name
             context['file_name'] = "media/" + NameOfFile.rsplit('.', 1)[0] + ".docx"
-            return check404(context['file_name'], NameOfFile)
+            return check404(request,context['file_name'], NameOfFile)
+        else:
+            messages.warning(request, "Wrong file format. Allowed PDF")
+            return HttpResponseRedirect('/')
     else:  
         form = Upload()
         return render(request,"index.html",{'form': form})
