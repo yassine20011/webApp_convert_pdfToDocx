@@ -3,7 +3,7 @@ import os
 
 def delete():
     while True:
-        time.sleep(6)
+        time.sleep(3)
         if len(os.listdir('/home/ubuntu/yassine/media')) == 0:
             print("Directory is empty")
         else:
@@ -15,7 +15,7 @@ def delete():
                 time.sleep(1)
                 counter += 1
                 print(counter)
-                if counter == 5:
+                if counter == 120:
                     os.system("./rm.sh")
                     control_while = False
                 else:

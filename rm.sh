@@ -1,1 +1,1 @@
-rm -rf media/*
+sudo rm -rf media/*
