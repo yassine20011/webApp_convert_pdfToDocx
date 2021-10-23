@@ -49,7 +49,7 @@ SITE_ID = 1
 DEFAULT_AUTO_FIELD='django.db.models.AutoField'
 
 ROBOTS_SITEMAP_URLS = [
-    'http://www.freeconvert.tk/sitemap.xml',
+    'http://pdftodocx.online/sitemap.xml',
 ]
 ROBOTS_USE_SITEMAP = True
 ROBOTS_SITEMAP_VIEW_NAME = 'cached-sitemap'
