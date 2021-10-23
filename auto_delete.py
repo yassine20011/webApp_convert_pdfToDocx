@@ -9,13 +9,13 @@ def delete():
         else:
             print("Directory is not empty")
             counter = 1
-            print(counter)
+            #print(counter)
             control_while = True
             while control_while:
                 time.sleep(1)
                 counter += 1
                 print(counter)
-                if counter == 120:
+                if counter == 60*60:
                     os.system("./rm.sh")
                     control_while = False
                 else:
