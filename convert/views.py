@@ -7,12 +7,12 @@ import requests
 from django.contrib import messages
 
 
-URL = "http://pdftodocx.online/"
-#URL = "http://127.0.0.1:8000"
+#URL = "http://pdftodocx.online/"
+URL = "http://127.0.0.1:8000"
 
 def check404(request,url, NameOfFile):
-    #file_converter = "/home/ubuntu/yassine/media/" + NameOfFile
-    file_converter = "media/" + NameOfFile
+    file_converter = "/home/ubuntu/yassine/media/" + NameOfFile
+    #file_converter = "media/" + NameOfFile
     pdf_file = file_converter
     try:
         parse(pdf_file)
