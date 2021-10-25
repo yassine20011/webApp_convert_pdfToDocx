@@ -10,21 +10,24 @@ from django.contrib import messages
 URL = "http://pdftodocx.online/"
 #URL = "http://127.0.0.1:8000"
 
-def check404(request,url, NameOfFile):
-    file_converter = "/home/ubuntu/yassine/media/" + NameOfFile
-    #file_converter = "media/" + NameOfFile
+def space(string):
+    return string.replace(" ", "_")
+
+def check404(request,context, NameOfFile):
+    file_converter = "/home/ubuntu/yassine/media/" + space(NameOfFile)
+    #file_converter = "media/" + space(NameOfFile)
     pdf_file = file_converter
     try:
         parse(pdf_file)
     except RuntimeError:
         pass
-    r = requests.get(URL+"/"+url)
+    r = requests.get(URL+"/"+context)
     print(r.status_code)
     if r.status_code != 200:
         messages.error(request, "Oops! something went wrong")
         return redirect("/")
     else:
-        return redirect(url)
+        return redirect(context)
 
 
 def main(request):
@@ -35,9 +38,9 @@ def main(request):
         if form.is_valid():
             form.save()
             NameOfFile = request.FILES['file'].name
-            context['file_name'] = "media/" + NameOfFile.rsplit('.', 1)[0] + ".docx"
+            context['file_name'] = "media/" + space(NameOfFile.rsplit('.', 1)[0]) + ".docx"
             return check404(request,context['file_name'], NameOfFile)
-        else:
+        else: 
             messages.warning(request, "Wrong file format. Allowed PDF")
             return HttpResponseRedirect('/')
     else:  
