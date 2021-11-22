@@ -1,4 +1,4 @@
-git rm -r --cached .   # will delete whole git history, use with caution
+git rm -r --cached db.sqlite3
 git add .
 git commit -m
 git push ~

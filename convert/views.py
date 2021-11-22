@@ -41,7 +41,7 @@ def main(request):
             context['file_name'] = "media/" + space(NameOfFile.rsplit('.', 1)[0]) + ".docx"
             return check404(request,context['file_name'], NameOfFile)
         else: 
-            messages.warning(request, "Wrong file format. Allowed PDF")
+            messages.warning(request, "Wrong file format or size greater than 10MB. Allowed PDF")
             return HttpResponseRedirect('/')
     else:  
         form = Upload()
