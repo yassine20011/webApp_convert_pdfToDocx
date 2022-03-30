@@ -27,7 +27,6 @@ urlpatterns = [
     path('', views.main),
     #path('base/', views.base, name='base'),
     path('home/', views.main, name='home'),
-    path('<slug:slug>/', views.Snippet_detail),
     re_path(r'^sitemap.xml$', cache_page(60*60*24)(sitemap_view), {'sitemaps': sitemaps,'content_type':'application/xml'}),
     re_path(r'^robots\.txt', include('robots.urls')),
     #path('media/',views.media, name='media'),
