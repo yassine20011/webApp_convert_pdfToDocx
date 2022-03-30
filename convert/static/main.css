@@ -46,9 +46,7 @@ html{
     align-items: center;
     text-align: center;
     margin-bottom: 30px;
-
 }
-
 
 p{
     font-family: 'Kiwi Maru', serif;
@@ -61,6 +59,7 @@ p{
     top: 10px;
     margin: 0 5px;
 }
+
 .text-1
 {
     font-family: 'Kiwi Maru', serif;
@@ -92,7 +91,7 @@ p{
     border: 1px solid rgb(0, 0, 0); 
     border-radius: 2px;
     position: relative;
-    top: 100px;
+    top: 85px;
     overflow: hidden;
     align-items: center;
     height: 350px;
