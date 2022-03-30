@@ -1,7 +1,8 @@
+import contextlib
 from django.db.models import FileField
 from django.forms import forms
 from django.template.defaultfilters import filesizeformat
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 class ContentTypeRestrictedFileField(FileField):
     """
@@ -27,14 +28,10 @@ class ContentTypeRestrictedFileField(FileField):
         data = super(ContentTypeRestrictedFileField, self).clean(*args, **kwargs)
 
         file = data.file
-        try:
+        with contextlib.suppress(AttributeError):
             content_type = file.content_type
-            if content_type in self.content_types:
-                if file._size > self.max_upload_size:
-                    raise forms.ValidationError(_('Please keep filesize under %s. Current filesize %s') % (filesizeformat(self.max_upload_size), filesizeformat(file._size)))
-            else:
+            if content_type not in self.content_types:
                 raise forms.ValidationError(_('Filetype not supported.'))
-        except AttributeError:
-            pass
-
+            if file._size > self.max_upload_size:
+                raise forms.ValidationError(_('Please keep filesize under %s. Current filesize %s') % (filesizeformat(self.max_upload_size), filesizeformat(file._size)))
         return data

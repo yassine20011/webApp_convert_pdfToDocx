@@ -12,7 +12,7 @@ from django.contrib.sitemaps.views import sitemap
 from convert.sitemaps import SnippetSitemap, StaticViewsSitemap
 from django.views.static import serve
 from django.views.generic.base import TemplateView 
-from django.conf.urls import url , include
+from django.urls import include, re_path
 from django.views.decorators.cache import cache_page
 from django.contrib.sitemaps import views as sitemaps_views
 
@@ -28,8 +28,8 @@ urlpatterns = [
     #path('base/', views.base, name='base'),
     path('home/', views.main, name='home'),
     path('<slug:slug>/', views.Snippet_detail),
-    url(r'^sitemap.xml$', cache_page(60*60*24)(sitemap_view), {'sitemaps': sitemaps,'content_type':'application/xml'}),
-    url(r'^robots\.txt', include('robots.urls')),
+    re_path(r'^sitemap.xml$', cache_page(60*60*24)(sitemap_view), {'sitemaps': sitemaps,'content_type':'application/xml'}),
+    re_path(r'^robots\.txt', include('robots.urls')),
     #path('media/',views.media, name='media'),
     #url(r'^sitemap1\.xml$', sitemap,{'sitemaps':sitemaps,'content_type':'application/xml'},name='django.contrib.sitemaps.views.sitemap'),
     #path("robots.txt",TemplateView.as_view(template_name="robots.txt", content_type="text/plain"))
