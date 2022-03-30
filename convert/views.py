@@ -10,6 +10,7 @@ from django.contrib import messages
 
 
 
+
 def space(string):
     return string.replace(" ", "_")
 
@@ -21,20 +22,21 @@ def check404(request, path, FileName):
     with contextlib.suppress(RuntimeError):
         parse(pdf_file)
     
-    os.chdir("media")
-    for file in glob.glob("*.docx"):    
-        if file ==  FileName:
-            print("File found:", file)
-            print("File converted successfully:")
-        return redirect(path)
+    #os.chdir(r"C:\Users\AMJAD\Desktop\webApp_convert_pdfToDocx\media")
+    os.chdir(r"/app/media")
+
+    for file in glob.glob("*.docx"):
+        if file ==  space(FileName.rsplit('.', 1)[0]) + ".docx":
+            print("File already exists")
+            return redirect(path)
     messages.error(request, "Oops! something went wrong")
     return HttpResponseRedirect('/')
 
 def main(request):
-
     
     if request.method == 'POST':
         form = Upload(request.POST, request.FILES)
+        
         if form.is_valid():
             form.save()
             FileName = request.FILES['file'].name
@@ -43,6 +45,7 @@ def main(request):
         else: 
             messages.warning(request, "Wrong file format or size greater than 10MB. Allowed PDF")
             return HttpResponseRedirect('/')
+    
     else:  
         form = Upload()
         return render(request, "index.html", {'form': form})
