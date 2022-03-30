@@ -1,6 +1,4 @@
-from django.contrib.sitemaps.views import x_robots_tag
 from convert.models import Snippet
-from django import http
 from django.urls import reverse
 from django.contrib import sitemaps
 from .models import Snippet
@@ -8,9 +6,10 @@ from .models import Snippet
 class StaticViewsSitemap(sitemaps.Sitemap):
     priority  = 1.0
     changefreq = "daily"
+    
     def items(self):
         return [
-        '',
+        'home',
     ]
     def location(self, items):
         return reverse(items)
