@@ -1,1 +1,1 @@
-web: gunicorn projectConvert.wsgi
+web: gunicorn projectConvert.wsgi --log-file -
