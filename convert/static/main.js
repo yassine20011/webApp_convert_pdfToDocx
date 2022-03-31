@@ -19,5 +19,4 @@ input.addEventListener("change", () => {
 var r = document.getElementById("id_file");
 r.className += "form-control";
 
-input.setAttribute('aria-describedby', 'button-addon2');
-input.setAttribute("required", "") 
+document.getElementById("id_file").setAttribute('aria-describedby', 'button-addon2');

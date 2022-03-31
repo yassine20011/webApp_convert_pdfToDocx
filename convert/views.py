@@ -21,7 +21,7 @@ def check404(request, path, FileName):
     pdf_file = file_converter
     with contextlib.suppress(RuntimeError):
         parse(pdf_file)
-    
+
     #os.chdir(r"C:\Users\AMJAD\Desktop\webApp_convert_pdfToDocx\media")
     os.chdir(r"/app/media")
 
@@ -36,16 +36,22 @@ def main(request):
     
     if request.method == 'POST':
         form = Upload(request.POST, request.FILES)
-        
-        if form.is_valid():
-            form.save()
-            FileName = request.FILES['file'].name
-            path = "media/" + space(FileName.rsplit('.', 1)[0]) + ".docx"
-            return check404(request, path, FileName)
-        else: 
-            messages.warning(request, "Wrong file format or size greater than 10MB. Allowed PDF")
+        try:
+            if form.is_valid():
+                form.save()
+                FileName = request.FILES['file'].name
+                path = "media/" + space(FileName.rsplit('.', 1)[0]) + ".docx"
+                return check404(request, path, FileName)
+
+            else: 
+                messages.warning(request, "Wrong file format or size greater than 10MB. Allowed PDF")
+                return HttpResponseRedirect('/')
+
+        except FileNotFoundError:
+            messages.warning(request, "Please select a file to convert")
             return HttpResponseRedirect('/')
-    
+
+
     else:  
         form = Upload()
         return render(request, "index.html", {'form': form})
