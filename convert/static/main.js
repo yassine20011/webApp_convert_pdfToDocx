@@ -13,3 +13,7 @@ input.addEventListener("change", () => {
     btn.classList.remove("chosen")
 })
 
+var r = document.getElementById("id_file");
+r.className += "form-control";
+
+document.getElementById('id_file').setAttribute('aria-describedby', 'button-addon2');
