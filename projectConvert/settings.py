@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '@wo$r)7w!=u0_uc2o$t8-!k(nsj1n4r*-7ym6qfp!7b+c&ijdm'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['www.pdftodocx.online','127.0.0.1', 'pdftodocx.online', 'pdf45.herokuapp.com']
 
@@ -149,10 +149,12 @@ STATIC_URL = '/static/'
 
 MEDIA_URL = 'media/'
 
-if DEBUG:
-  STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-else:
-    PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
-    STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+#if DEBUG:
+#  STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+#else:
+#  STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
