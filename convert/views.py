@@ -48,7 +48,7 @@ def main(request):
                 return HttpResponseRedirect('/')
 
         except FileNotFoundError:
-            messages.warning(request, "Please select a file to convert")
+            messages.warning(request, "No file selected. Please select a file.")
             return HttpResponseRedirect('/')
 
 
