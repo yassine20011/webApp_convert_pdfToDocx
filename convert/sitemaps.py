@@ -9,7 +9,7 @@ class StaticViewsSitemap(sitemaps.Sitemap):
     
     def items(self):
         return [
-        'home',
+        'pdf-to-docx',
     ]
     def location(self, items):
         return reverse(items)
