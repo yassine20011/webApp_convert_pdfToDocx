@@ -7,6 +7,7 @@ __pycache__/
 # C extensions
 *.so
 
+
 # Distribution / packaging
 .Python
 build/
@@ -61,8 +62,13 @@ coverage.xml
 # Django stuff:
 *.log
 local_settings.py
+runtime.txt
 db.sqlite3
+
 db.sqlite3-journal
+
+*.txt
+
 
 # Flask stuff:
 instance/

@@ -15,8 +15,3 @@ input.addEventListener("change", () => {
 
 
 
-
-var r = document.getElementById("id_file");
-r.className += "form-control";
-
-document.getElementById("id_file").setAttribute('aria-describedby', 'button-addon2');

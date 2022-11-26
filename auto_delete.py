@@ -1,10 +1,12 @@
 import time
 import os
 
+path = 'app/media'
+
 def delete():
     while True:
         time.sleep(3)
-        if len(os.listdir('/home/ubuntu/yassine/media')) == 0:
+        if len(os.listdir(path)) == 0:
             print("Directory is empty")
         else:
             print("Directory is not empty")

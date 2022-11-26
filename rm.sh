@@ -1,1 +1,1 @@
-sudo rm -rf media/*
+rm -rf app/media/*
